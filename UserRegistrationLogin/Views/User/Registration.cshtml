@@ -1,4 +1,4 @@
-﻿@model UserRegistrationLogin.Models.Extended.User
+﻿@model UserRegistrationLogin.RegistrationDetail
 
 @{
     ViewBag.Title = "Registration";
@@ -19,7 +19,7 @@ else
     using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
- 
+
         <div class="form-horizontal">
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -80,11 +80,11 @@ else
         }
     }
 }
- 
+
 <div>
     @Html.ActionLink("Login", "Login")
 </div>
- 
+
 @section Scripts{
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
